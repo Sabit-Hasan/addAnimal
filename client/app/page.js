@@ -13,7 +13,7 @@ const Home = () => {
   const [filteredAnimals, setFilteredAnimals] = useState([]);
   const [animalModalIsOpen, setAnimalModalIsOpen] = useState(false);
   const [categoryModalIsOpen, setCategoryModalIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +26,7 @@ const Home = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
-        setLoading(false); // Set loading to false after fetching
+        setLoading(false);
       }
     };
     fetchData();
